@@ -5,27 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const muteIcon = document.getElementById('muteIcon');
     const volumeSlider = document.getElementById('volumeSlider');
 
-    // --- 1. FUNÇÃO DO CONTADOR DE VISUALIZAÇÕES ---
-    function carregarVisualizacoes() {
-        const statsElement = document.querySelector('.stats');
-        // Usando um contador alternativo mais estável (HITS)
-        const username = "daviveloso-site"; 
-        const url = `https://api.countapi.xyz/hit/${username}/visits`;
-
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                statsElement.innerHTML = `<p>👁️ ${data.value || 7}</p>`;
-            })
-            .catch(() => {
-                // Valor padrão caso a API demore a responder
-                statsElement.innerHTML = `<p>👁️ 1.247</p>`;
-            });
-    }
-
-    carregarVisualizacoes();
-
-    // --- 2. TELA INICIAL E PLAY ---
+    // --- 1. TELA INICIAL E PLAY ---
     initialScreen.addEventListener('click', () => {
         initialScreen.classList.add('hidden');
         bgMusic.volume = 0.5;
@@ -34,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 3. CONTROLE DE VOLUME (SLIDER) ---
+    // --- 2. CONTROLE DE VOLUME (SLIDER) ---
     volumeSlider.addEventListener('input', (e) => {
         const value = e.target.value;
         bgMusic.volume = value;
@@ -42,13 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
         updateVolumeIcon(value);
     });
 
-    // --- 4. BOTÃO DE MUDO ---
+    // --- 3. BOTÃO DE MUDO ---
     muteBtn.addEventListener('click', () => {
         bgMusic.muted = !bgMusic.muted;
         updateVolumeIcon(bgMusic.muted ? 0 : bgMusic.volume);
     });
 
-    // --- 5. FUNÇÃO PARA TROCAR ÍCONES (SEM QUEBRAR) ---
+    // --- 4. FUNÇÃO PARA TROCAR ÍCONES (SEM QUEBRAR) ---
     function updateVolumeIcon(volume) {
         if (bgMusic.muted || volume == 0) {
             // Ícone de Mudo
@@ -59,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- 6. GERADOR DE NEVE ---
+    // --- 5. GERADOR DE NEVE ---
     const snowContainer = document.querySelector('.snow-background');
     if (snowContainer) {
         const createSnowflake = () => {
@@ -85,4 +65,5 @@ document.addEventListener('DOMContentLoaded', () => {
             createSnowflake();
         }
     }
+
 });
