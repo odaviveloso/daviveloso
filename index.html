@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davi Veloso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="audio-controller">
+    <button id="muteBtn">
+        <img src="https://img.icons8.com/material-rounded/24/ffffff/speaker.png" id="muteIcon" alt="Som">
+    </button>
+    <div class="volume-slider-container">
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+    </div>
+</div>
+
+    <div class="initial-screen" id="initialScreen">
+        <p>Clique na tela.</p>
+    </div>
+
+    <div class="snow-background"></div>
+
+    <audio id="bgMusic" loop>
+        <source src="ssstik.io_1766127308685.mp3" type="audio/mpeg">
+    </audio>
+
+    <main class="container">
+        <section class="card">
+            
+            <div class="profile-header">
+                <div class="avatar-container">
+                    <img src="https://media.discordapp.net/attachments/1403503177399009323/1451500102689620109/EDAF8DB2-6306-48AE-A6AB-4A3E37E797C6.gif?ex=69466650&is=694514d0&hm=433b8135b7fdb449cb764de3194c44c8441193ff0f343983d8841368e13938a3&=" alt="Foto de Perfil" class="avatar">
+                </div>
+                <h1 class="glow-text">Davi Veloso</h1>
+            </div>
+
+            <p class="tech-stack">Java • C# • C • Python • JS • HTML</p>
+            <p class="description">Disponível para projetos. Entre em contato pelo meu perfil da Steam.</p>
+
+            <div class="tags">
+                <span class="tag">
+                    <img src="https://zyo.se/assets/images/tags/1f4bb.png" width="16" alt="Icon"> Programador
+                </span>
+                <span class="tag">
+                    <img src="https://zyo.se/assets/images/tags/1f43e.png" width="16" alt="Icon"> Animais
+                </span>
+                <span class="tag">
+                    <img src="https://zyo.se/assets/images/tags/1f3ae.png" width="16" alt="Icon"> Gamer
+                </span>
+                <span class="tag">
+                    <img src="https://zyo.se/assets/images/tags/D75kP.png" width="16" alt="Icon"> Cybersecurity
+                </span>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/0veloso" target="_blank" rel="noopener noreferrer">
+                    <img src="https://zyo.se/assets/images/socials/rd0Vr.png" alt="Instagram">
+                </a>
+                <a href="https://steamcommunity.com/id/oveloso" target="_blank" rel="noopener noreferrer">
+                    <img src="https://zyo.se/assets/images/socials/pX17t.png" alt="Steam">
+                </a>
+                <a href="https://github.com/odaviveloso" target="_blank" rel="noopener noreferrer">
+                    <img src="https://zyo.se/assets/images/socials/R33vy.png" alt="Github">
+                </a>
+                <a href="https://spotify.com" target="_blank" rel="noopener noreferrer">
+                    <img src="https://zyo.se/assets/images/socials/ipN94.png" alt="Spotify">
+                </a>
+                <a href="https://namemc.com/profile/OGvls" target="_blank" rel="noopener noreferrer">
+                    <img src="https://zyo.se/assets/images/socials/ML7MP.png" alt="NameMC">
+                </a>
+            </div>
+
+            <div class="stats">
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
